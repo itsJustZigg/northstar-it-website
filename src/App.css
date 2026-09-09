@@ -1,0 +1,24 @@
+:root{
+    --primary-color: #00296B;
+    --secondary-color: #005A92;
+    --accent: #FDC500;
+    --bg-color: #FFFFFF;
+    --surface-color: #F8FAFC;
+    --text-color: #0F172A;
+    --muted-text-color: #475569; 
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar > ul{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.navbar > ul > li{
+    list-style: none;
+    
+}
