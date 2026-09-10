@@ -1,7 +1,7 @@
 export default function Industries(){
     return(
         <>
-        <section>
+        <section className="industries">
             <h2>IT Consulting for Businesses Across Hampton Roads</h2>
             <ul>
                 <li>Law Firms</li>

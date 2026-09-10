@@ -3,7 +3,7 @@ import { useState } from "react"
 function TestimonialCard({profileUrl, name, jobTitle, review}){
     return(
         <>
-        <article>
+        <article className="testimonial-card">
             <img src={profileUrl} 
             alt="profile picture of business owner who left a review for Northstar IT"/>
             <h3>{name}</h3>
@@ -22,7 +22,7 @@ export default function Testimonials(){
     ]
     
     return(
-        <section>
+        <section className="testimonials">
         {testimonials.map(item => <TestimonialCard profileUrl={item.profileUrl} 
         name={item.name} 
         jobTitle={item.jobTitle}

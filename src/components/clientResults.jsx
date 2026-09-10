@@ -16,7 +16,7 @@ export default function ClientResults(){
     ]
     
     return(
-        <section>
+        <section className="client-results">
             <h2>Our Results in Numbers</h2>
             <p>From improving everyday workflows to strengthening IT infrastructure, we help businesses get more from their technology.</p>
             <dl>

@@ -50,7 +50,7 @@ export default function Services(){
     ]
 
     return(
-        <section>
+        <section className="services">
             <h2>What We Do</h2>
             <p>We help businesses solve IT challenges and implement practical solutions that make technology 
                 easier to manage and support long-term growth.

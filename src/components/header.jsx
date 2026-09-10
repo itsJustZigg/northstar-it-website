@@ -1,6 +1,5 @@
 export default function Header(){
     return(
-        <>
         <nav className="navbar">
         <img src="src\assets\header-logo\Northstar IT (2).svg"
         alt="the northstar next to the company name Northstar IT" />
@@ -12,6 +11,5 @@ export default function Header(){
             <button>Schedule a Consultation</button>
         </ul>
         </nav>
-        </>
     )
 }
