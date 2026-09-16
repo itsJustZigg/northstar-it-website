@@ -1,3 +1,5 @@
+import heroImage from '../assets/hero-image/vitaly-gariev-E65p9f63Iv0-unsplash.jpg'
+
 export default function Hero(){
     return(
     <section className="hero">
@@ -10,7 +12,7 @@ export default function Hero(){
             <button>Schedule a Consultation</button>
         </div>
         <div className="hero-img">
-        <img src="src\assets\hero-image\vitaly-gariev-E65p9f63Iv0-unsplash.jpg"
+        <img src={heroImage}
         alt="IT consultant sitting down with client to discuss their IT needs"
         />
         </div>

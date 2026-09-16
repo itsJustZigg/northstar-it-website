@@ -1,3 +1,11 @@
+import strategyIcon from '../assets/service-icons/iconoir--strategy.svg'
+import serverIcon from '../assets/service-icons/iconoir--server.svg'
+import securityIcon from '../assets/service-icons/Password.svg'
+import cloudIcon from '../assets/service-icons/arcticons--vivo-cloud.svg'
+import networkIcon from '../assets/service-icons/Wifi.svg'
+import databaseIcon from '../assets/service-icons/Database.svg'
+
+
 function ServiceCard({iconUrl, heading, description, callToAction}){
     return(
         <article className="service-card">
@@ -12,37 +20,37 @@ function ServiceCard({iconUrl, heading, description, callToAction}){
 export default function Services(){
     const services = [
         {
-            iconUrl:"src/assets/service-icons/iconoir--strategy.svg", 
+            iconUrl: strategyIcon, 
             heading: "IT Consulting & Strategy", 
             description: "Get expert guidance to make smarter technology decisions for your business.", 
             callToAction: "Learn More"
         },
         {
-            iconUrl:"src/assets/service-icons/iconoir--server.svg", 
+            iconUrl: serverIcon, 
             heading: "IT Modernization", 
             description: "Replace outdated technology with modern, reliable solutions.", 
             callToAction: "Learn More"
         },
         {
-            iconUrl:"src/assets/service-icons/Password.svg", 
+            iconUrl: securityIcon, 
             heading: "Cybersecurity", 
             description: "Protect your business from threats and keep sensitive data secure.", 
             callToAction: "Learn More"
         },
         {
-            iconUrl:"src/assets/service-icons/arcticons--vivo-cloud.svg", 
+            iconUrl: cloudIcon, 
             heading: "Cloud Solutions", 
             description: "Move your systems and data to the cloud securely and efficiently.", 
             callToAction: "Learn More"
         },
         {
-            iconUrl:"src/assets/service-icons/Wifi.svg", 
+            iconUrl: networkIcon, 
             heading: "Network Infrastructure", 
             description: "Build a reliable network that keeps your business connected.", 
             callToAction: "Learn More"
         },
         {
-            iconUrl:"src/assets/service-icons/Database.svg", 
+            iconUrl: databaseIcon, 
             heading: "Backup & Disaster Recovery", 
             description: "Protect critical data and recover quickly when problems arise.", 
             callToAction: "Learn More"

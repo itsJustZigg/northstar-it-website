@@ -1,4 +1,11 @@
 import { Link } from "react-router"
+import northstarFooterLogo from '../assets/Northstar IT footer logo (3).svg'
+import fbIcon from '../assets/social-icons/Facebook.svg'
+import xIcon from '../assets/social-icons/Twitter.svg'
+import instaIcon from '../assets/social-icons/Instagram.svg'
+import linkedInIcon from '../assets/social-icons/LinkedIn.svg'
+import ytIcon from '../assets/social-icons/YouTube.svg'
+
 
 function Copyright(){
     return(
@@ -69,19 +76,19 @@ function SocialMediaIcons(){
     return(
         <nav className="social-icons">
             <a href="">
-                <img src="src\assets\social-icons\Facebook.svg" alt="Facebook" />
+                <img src={fbIcon} alt="Facebook" />
             </a>
             <a href="">
-                <img src="src\assets\social-icons\Twitter.svg" alt="Twitter" />
+                <img src={xIcon} alt="Twitter" />
             </a>
             <a href="">
-                <img src="src\assets\social-icons\Instagram.svg" alt="Instagram" />
+                <img src={instaIcon} alt="Instagram" />
             </a>
             <a href="">
-                <img src="src\assets\social-icons\LinkedIn.svg" alt="LinkedIn" />
+                <img src={linkedInIcon} alt="LinkedIn" />
             </a>
             <a href="">
-                <img src="src\assets\social-icons\YouTube.svg" alt="YouTube" />
+                <img src={ytIcon} alt="YouTube" />
             </a>
         </nav>
     )
@@ -92,7 +99,7 @@ export default function Footer(){
         <footer>
             <div className="footer-main">
                 <div className="footer-brand">
-                    <img src="src\assets\Northstar IT footer logo (3).svg"></img>
+                    <img src={northstarFooterLogo}></img>
                     <p>Practical IT solutions that help<br></br> businesses work smarter, run reliably,<br></br> and grow</p>
                     <SocialMediaIcons />
                 </div>

@@ -1,4 +1,7 @@
 import { useState } from "react"
+import sarahProfile from '../assets/testimonial-profile-pics/nussbaum-law-IOvsEAEjnDE-unsplash.jpg'
+import davidProfile from '../assets/testimonial-profile-pics/lucas-favre-_kwpH8O-dNo-unsplash.jpg'
+import jennProfile from '../assets/testimonial-profile-pics/podmatch-2mMhaoBGjCs-unsplash.jpg'
 
 function TestimonialCard({profileUrl, name, jobTitle, review}){
     return(
@@ -20,9 +23,9 @@ function TestimonialCard({profileUrl, name, jobTitle, review}){
 
 export default function Testimonials(){
     const testimonials = [
-        {profileUrl: "src/assets/testimonial-profile-pics/nussbaum-law-IOvsEAEjnDE-unsplash.jpg", name: "Sarah Mitchell", jobTitle: "Managing Partner, Mitchell & Associates", review: '"Northstar IT replaced several outdated systems and made the transition seamless. We finally have technology we can rely on."'},
-        {profileUrl: "src/assets/testimonial-profile-pics/lucas-favre-_kwpH8O-dNo-unsplash.jpg", name: "David Reynolds", jobTitle: "Operations Director, Harbor Design Group", review: '"Northstar IT helped us standardize our accounts, devices, and software. Onboarding new employees is now much simpler."'},
-        {profileUrl: "src/assets/testimonial-profile-pics/podmatch-2mMhaoBGjCs-unsplash.jpg", name: "Jennifer Carter", jobTitle: "Office Manager, Carter & Cole CPAs", review: '"Northstar IT identified our biggest cybersecurity gaps and helped us put practical protections in place— without disrupting our workflow."'}
+        {profileUrl: sarahProfile, name: "Sarah Mitchell", jobTitle: "Managing Partner, Mitchell & Associates", review: '"Northstar IT replaced several outdated systems and made the transition seamless. We finally have technology we can rely on."'},
+        {profileUrl: davidProfile, name: "David Reynolds", jobTitle: "Operations Director, Harbor Design Group", review: '"Northstar IT helped us standardize our accounts, devices, and software. Onboarding new employees is now much simpler."'},
+        {profileUrl: jennProfile, name: "Jennifer Carter", jobTitle: "Office Manager, Carter & Cole CPAs", review: '"Northstar IT identified our biggest cybersecurity gaps and helped us put practical protections in place— without disrupting our workflow."'}
     ]
     
     return(
