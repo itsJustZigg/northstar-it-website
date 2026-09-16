@@ -1,9 +1,9 @@
 function Result({resultNumber, resultLabel}){
     return(
-        <>
-        <dt>{resultNumber}</dt>
-        <dd>{resultLabel}</dd>
-        </>
+        <div className="result">
+            <dt>{resultNumber}</dt>
+            <dd>{resultLabel}</dd>
+        </div>
     )
 }
 
@@ -17,9 +17,11 @@ export default function ClientResults(){
     
     return(
         <section className="client-results">
-            <h2>Our Results in Numbers</h2>
-            <p>From improving everyday workflows to strengthening IT infrastructure, we help businesses get more from their technology.</p>
-            <dl>
+            <div className="client-results-header">
+                <h2>Our Results in Numbers</h2>
+                <p>From improving everyday workflows to strengthening IT infrastructure,<br></br> we help businesses get more from their technology.</p>
+            </div>
+            <dl className="stats">
                 {results.map(item => <Result resultNumber={item.resultNumber} resultLabel={item.resultLabel}/>)}
             </dl>
         </section>

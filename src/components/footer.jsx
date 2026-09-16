@@ -2,41 +2,41 @@ import { Link } from "react-router"
 
 function Copyright(){
     return(
-        <>
-        <p>Copyright © 2026 Northstar IT | All Rights Reserved | Terms and Conditions | Privacy Policy</p>
-        </>
+        <div className="footer-copyright">
+            <p>Copyright © 2026 Northstar IT | All Rights Reserved | Terms and Conditions | Privacy Policy</p>
+        </div>
     )
 }
 
 function AreasWeServe(){
     return(
-        <>
-        <p>Areas We Serve</p>
-        <p>Virginia Beach</p>
-        <p>Chesapeake</p>
-        <p>Norfolk</p>
-        <p>Suffolk</p>
-        <p>Portsmouth</p>
-        </>
+        <div className="footer-areas-we-serve">
+            <p>Areas We Serve</p>
+            <p>Virginia Beach</p>
+            <p>Chesapeake</p>
+            <p>Norfolk</p>
+            <p>Suffolk</p>
+            <p>Portsmouth</p>
+        </div>
     )
 }
 
 function Industries(){
     return(
-        <>
-        <p>Industries</p>
-        <p>Law Firms</p>
-        <p>Accounting Firms</p>
-        <p>Architecture & Engineering</p>
-        <p>Construction</p>
-        <p>Insurance</p>
-        </>
+        <div className="footer-industries">
+            <p>Industries</p>
+            <p>Law Firms</p>
+            <p>Accounting Firms</p>
+            <p>Architecture & Engineering</p>
+            <p>Construction</p>
+            <p>Insurance</p>
+        </div>
     )
 }
 
 function Company(){
     return(
-        <>
+        <div className="footer-company">
         <p>Company</p>
         <nav>
             <Link to="/about">About</Link>
@@ -45,13 +45,13 @@ function Company(){
             <Link to="/services">Services</Link>
             <Link to="/blog">Blog</Link>
         </nav>
-        </>
+        </div>
     )
 }
 
 function OurServices(){
     return(
-    <>
+    <div className="footer-services">
         <p>Our Services</p>
         <nav>
             <a href="">IT Consulting & Strategy</a>
@@ -61,28 +61,27 @@ function OurServices(){
             <a href="">Network Infrastructure</a>
             <a href="">Backup & Disaster Recovery</a>
         </nav>
-    </>
+    </div>
     )
 }
 
 function SocialMediaIcons(){
     return(
-
-        <nav>
+        <nav className="social-icons">
             <a href="">
-                <img src="" alt="Facebook" />
+                <img src="src\assets\social-icons\Facebook.svg" alt="Facebook" />
             </a>
             <a href="">
-                <img src="" alt="Twitter" />
+                <img src="src\assets\social-icons\Twitter.svg" alt="Twitter" />
             </a>
             <a href="">
-                <img src="" alt="Instagram" />
+                <img src="src\assets\social-icons\Instagram.svg" alt="Instagram" />
             </a>
             <a href="">
-                <img src="" alt="LinkedIn" />
+                <img src="src\assets\social-icons\LinkedIn.svg" alt="LinkedIn" />
             </a>
             <a href="">
-                <img src="" alt="YouTube" />
+                <img src="src\assets\social-icons\YouTube.svg" alt="YouTube" />
             </a>
         </nav>
     )
@@ -91,13 +90,19 @@ function SocialMediaIcons(){
 export default function Footer(){
     return(
         <footer>
-            <img src="src\assets\Northstar IT footer logo (3).svg"></img>
-            <p>Practical IT solutions that help businesses work smarter, run reliably, and grow</p>
-            <SocialMediaIcons />
-            <OurServices />
-            <Company />
-            <Industries />
-            <AreasWeServe />
+            <div className="footer-main">
+                <div className="footer-brand">
+                    <img src="src\assets\Northstar IT footer logo (3).svg"></img>
+                    <p>Practical IT solutions that help<br></br> businesses work smarter, run reliably,<br></br> and grow</p>
+                    <SocialMediaIcons />
+                </div>
+                <div className="footer-nav">
+                    <OurServices />
+                    <Company />
+                    <Industries />
+                    <AreasWeServe />
+                </div>
+            </div>
             <Copyright />
         </footer>
     )

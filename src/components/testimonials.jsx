@@ -4,10 +4,14 @@ function TestimonialCard({profileUrl, name, jobTitle, review}){
     return(
         <>
         <article className="testimonial-card">
-            <img src={profileUrl} 
-            alt="profile picture of business owner who left a review for Northstar IT"/>
-            <h3>{name}</h3>
-            <h4>{jobTitle}</h4>
+            <div className="testimonial-profile">
+                <img src={profileUrl}
+                    alt="profile picture of business owner who left a review for Northstar IT"/>
+                <div className="testimonial-profile-info">
+                    <h3>{name}</h3>
+                    <h5>{jobTitle}</h5>
+                </div>
+            </div>
             <p>{review}</p>
         </article>
         </>
@@ -16,9 +20,9 @@ function TestimonialCard({profileUrl, name, jobTitle, review}){
 
 export default function Testimonials(){
     const testimonials = [
-        {profileUrl: "", name: "Sarah Mitchell", jobTitle: "Managing Partner, Mitchell & Associates", review: "Northstar IT replaced several outdated systems and made the transition seamless. We finally have technology we can rely on."},
-        {profileUrl: "", name: "David Reynolds", jobTitle: "Operations Director, Harbor Design Group", review: "Northstar IT helped us standardize our accounts, devices, and software. Onboarding new employees is now much simpler."},
-        {profileUrl: "", name: "Jennifer Carter", jobTitle: "Office Manager, Carter & Cole CPAs", review: "Northstar IT identified our biggest cybersecurity gaps and helped us put practical protections in place— without disrupting our workflow."}
+        {profileUrl: "src/assets/testimonial-profile-pics/nussbaum-law-IOvsEAEjnDE-unsplash.jpg", name: "Sarah Mitchell", jobTitle: "Managing Partner, Mitchell & Associates", review: '"Northstar IT replaced several outdated systems and made the transition seamless. We finally have technology we can rely on."'},
+        {profileUrl: "src/assets/testimonial-profile-pics/lucas-favre-_kwpH8O-dNo-unsplash.jpg", name: "David Reynolds", jobTitle: "Operations Director, Harbor Design Group", review: '"Northstar IT helped us standardize our accounts, devices, and software. Onboarding new employees is now much simpler."'},
+        {profileUrl: "src/assets/testimonial-profile-pics/podmatch-2mMhaoBGjCs-unsplash.jpg", name: "Jennifer Carter", jobTitle: "Office Manager, Carter & Cole CPAs", review: '"Northstar IT identified our biggest cybersecurity gaps and helped us put practical protections in place— without disrupting our workflow."'}
     ]
     
     return(
