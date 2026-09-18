@@ -1,6 +1,13 @@
 import heroImage from '../assets/hero-image/vitaly-gariev-E65p9f63Iv0-unsplash.jpg'
 
 export default function Hero(){
+    function scrollToForm(formId){
+        const element = document.getElementById(formId)
+        if(element){
+            element.scrollIntoView({ behavior: 'smooth'})
+        }
+    }
+    
     return(
     <section className="hero">
         <div className="hero-content">
@@ -9,7 +16,7 @@ export default function Hero(){
                 strengthen security, and build reliable IT systems that support their<br></br>
                 goals.
             </p>
-            <button>Schedule a Consultation</button>
+            <button onClick={() => scrollToForm('contact-form')}>Schedule a Consultation</button>
         </div>
         <div className="hero-img">
         <img src={heroImage}

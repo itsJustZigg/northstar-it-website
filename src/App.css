@@ -31,6 +31,10 @@ button {
     font: inherit;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 :root{
     --primary-color: #00296B;
     --secondary-color: #005A92;
@@ -41,27 +45,27 @@ button {
     --muted-text-color: #475569; 
 }
 
+.under-construction-container{
+    display: grid;
+    height: 600px;
+    grid-template-columns: 1fr 1fr;
+}
+
 .navbar{
     display: flex;
-    height: 110px;
     align-items: center;
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--muted-text-color);
-    
-    
 }
 
-.nav-header > img{
-    min-width: 0;
-    max-width: 225px;
-    /* width: 225px; */
-    /* height: auto;  */
-    
+.nav-header img{
+    object-fit: cover;
 }
+
 
 .nav-links{
     display: flex;
-    gap: 3rem;
+    /* gap: 3rem; */
     padding: 0; 
     align-items: center;
     font-weight: 200;
@@ -70,25 +74,29 @@ button {
     list-style: none;
     line-height: 18pt;
     margin-left: auto;
-
-    
 }
 
-/* .nav-links > li{
-    display: flex;
-    font-weight: 200;
-    font-size: 18pt;
-    color: var(--primary-color);
-    list-style: none;
-    line-height: 18pt;
-    padding: 18px 0;
-} */
+.nav-links li{
+    padding: 1.5rem;
+}
+
+
+
+.nav-overlay {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-links a:link, .nav-links a:visited{
+    color: var(--primary-color)
+}
 
 .navbar > ul > button{
     background-color: var(--accent);
     border-radius: 30px;
-    /* width: 240px; */
-    /* height: 54px; */
     font-weight: 400;
     font-size: 16pt;
     border: none;
@@ -337,6 +345,7 @@ button {
 
 .cta-inner-box{
     display: flex;
+    min-height: 408px;
     border-radius: 24px;
     flex-direction: column;
     align-items: center;
@@ -372,6 +381,11 @@ button {
     padding: 18px 24px;
     color: var(--primary-color);
     line-height: 18pt;
+}
+
+.thanks-message{
+    color: var(--primary-color);
+    display: flex;
 }
 
 footer{
@@ -447,11 +461,17 @@ footer a{
     
     .menu-btn{
         display: block;
-        margin-left: auto;
     }
 
     .navbar{
+        position: relative;
+        z-index: 1000;
         flex-direction: column;
+        justify-content: center;
+    }
+
+    .navbar > ul > button{
+        margin-bottom: 1.5rem;
     }
 
     .nav-header{
@@ -459,15 +479,44 @@ footer a{
         align-items: center;
     }
 
+
     .nav-links{
         display: none;
     }
 
     .nav-links.open{
         display: flex;
+        position: absolute;
+        z-index: 9999;
+        top: 110px;
+        width: 100%;
         flex-direction: column;
-        margin-left: 0;
+        background-color: var(--bg-color);
+    }
+
+    .nav-links > li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links > li:hover{
+        background-color: #e6e6e6;
+    }
+
+    .nav-overlay{
+        display: block;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
         z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .nav-overlay.active{
+        opacity: 1;
+        visibility: visible;
     }
 
     .footer-main{

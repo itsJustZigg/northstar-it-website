@@ -1,4 +1,5 @@
-import { Link } from "react-router"
+// import { Link } from "react-router"
+import { NavLink } from 'react-router-dom';
 import northstarFooterLogo from '../assets/Northstar IT footer logo (3).svg'
 import fbIcon from '../assets/social-icons/Facebook.svg'
 import xIcon from '../assets/social-icons/Twitter.svg'
@@ -46,11 +47,11 @@ function Company(){
         <div className="footer-company">
         <p>Company</p>
         <nav>
-            <Link to="/about">About</Link>
-            <Link to="/contactus">Contact Us</Link>
-            <Link to="/careers">Careers</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/blog">Blog</Link>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/contactus">Contact Us</NavLink>
+            <NavLink to="/careers">Careers</NavLink>
+            <NavLink to="/services">Services</NavLink>
+            <NavLink to="/blog">Blog</NavLink>
         </nav>
         </div>
     )
