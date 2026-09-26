@@ -66,7 +66,6 @@ button:hover{
 
 .nav-links{
     display: flex;
-    /* gap: 3rem; */
     padding: 0; 
     align-items: center;
     font-weight: 200;
@@ -112,14 +111,11 @@ a {
 }
 
 .hero{
-    /* display: grid; */
-    /* max-width: 1440px; */
-    /* grid-template-columns: 1fr; */
     position: relative;
     background-image: url("./assets/hero-image/vitaly-gariev-E65p9f63Iv0-unsplash.jpg");
     background-size: cover;
     background-position: 65% center;
-    height: 650px;
+    min-height: 650px;
 }
 
 .hero-img img{
@@ -137,23 +133,18 @@ a {
 .hero-content{
     position: relative;
     z-index: 1;
-    height: 100%;
-    /* background-image: url("./assets/hero-image/vitaly-gariev-E65p9f63Iv0-unsplash.jpg");
-    background-size: cover; */
     padding: 48px 86px;
+    align-content: center;
 }
 
 .hero-content h1{
     margin-top: 46px;
-    /* white-space: nowrap; */
-    /* color: var(--primary-color); */
     color: var(--bg-color);
     margin-bottom: 8px;   
 }
 
 .hero-content p{
     margin-top: 8px;
-    /* color: var(--muted-text-color); */
     color: #f1f1f1;
 }
 
@@ -167,7 +158,6 @@ a {
     padding: 18px 24px;
     border: none;
     color: var(--primary-color);
-    /* line-height: 18pt; */
 }
 
 .industries{
@@ -272,7 +262,6 @@ a {
 
 .stats{
     display: flex;
-    /* gap: 166px; */
 }
 
 .result:nth-child(n+2){
@@ -295,7 +284,6 @@ a {
 
 .services{
     min-height: 1252px;
-    /* height: 1252px; */
     margin-bottom: 16px;
 }
 
@@ -323,8 +311,6 @@ a {
     column-gap: 26px;
     row-gap: 28px;
     grid-template-columns: repeat(auto-fit, minmax(0px, 380px));
-    /* grid-template-columns: repeat(3, 380px); */
-    /* grid-template-rows: repeat(2, 370px); */
 }
 
 .service-card{
@@ -336,7 +322,6 @@ a {
 }
 
 .service-card h3{
-    /* white-space: nowrap; */
     font-size: 28px;
     margin-right: 32px;
     margin-bottom: 8px;
@@ -369,7 +354,6 @@ a {
     align-items: center;
     justify-content: center;
     background-color: #E4E6E7;
-    /* height: 418px; */
     width: 1220px;
 }
 
@@ -407,7 +391,6 @@ a {
 }
 
 footer{
-    /* height: 588px; */
     background-color: var(--primary-color);
     color: var(--bg-color);
     padding: 0 64px;
@@ -537,11 +520,20 @@ footer a{
         visibility: visible;
     }
 
-    .hero{
-        grid-template-columns: 1fr;
-    }
-
     .footer-main{
         flex-direction: column;
+    }
+}
+
+@media (max-width: 375px){
+    .hero-content{
+        padding: 24px 44px;
+    }
+    .hero-content h1{
+        line-height: 46pt;
+        font-size: 36pt;
+    }
+    .hero{
+        background-position: 50% center;
     }
 }
