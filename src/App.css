@@ -1,4 +1,5 @@
 * {
+    outline: solid 1px red;
     box-sizing: border-box;
 }
 
@@ -111,9 +112,13 @@ a {
 }
 
 .hero{
-    display: grid;
+    /* display: grid; */
     /* max-width: 1440px; */
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr; */
+    position: relative;
+    background-image: url("./assets/hero-image/vitaly-gariev-E65p9f63Iv0-unsplash.jpg");
+    background-size: cover;
+    background-position: 65% center;
     height: 650px;
 }
 
@@ -123,20 +128,33 @@ a {
     object-fit: cover;
 }
 
+.hero-overlay{
+    inset: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 .hero-content{
-    padding: 48px 86px 48px 86px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    /* background-image: url("./assets/hero-image/vitaly-gariev-E65p9f63Iv0-unsplash.jpg");
+    background-size: cover; */
+    padding: 48px 86px;
 }
 
 .hero-content h1{
     margin-top: 46px;
-    white-space: nowrap;
-    color: var(--primary-color);
-    margin-bottom: 8px;    
+    /* white-space: nowrap; */
+    /* color: var(--primary-color); */
+    color: var(--bg-color);
+    margin-bottom: 8px;   
 }
 
 .hero-content p{
     margin-top: 8px;
-    color: var(--muted-text-color);
+    /* color: var(--muted-text-color); */
+    color: #f1f1f1;
 }
 
 .hero-content button{
@@ -517,6 +535,10 @@ footer a{
     .nav-overlay.active{
         opacity: 1;
         visibility: visible;
+    }
+
+    .hero{
+        grid-template-columns: 1fr;
     }
 
     .footer-main{
