@@ -241,7 +241,7 @@ a {
     flex-direction: column;
     align-items: center;
     padding-top: 150px;
-    height: 540px;
+    min-height: 540px;
     color: var(--bg-color);
     background-color: var(--primary-color);
 }
@@ -523,6 +523,23 @@ footer a{
     .industries ul{
         flex-direction: column;
         padding: 36px;
+    }
+
+    .stats{
+        flex-direction: column;
+    }
+
+    .result{
+        margin-bottom: 36px;
+    }
+
+    .result:nth-child(n+2){
+        border-left: none;
+    }
+
+    .result:nth-child(-n + 3){
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--muted-text-color);
     }
 
     .footer-main{
