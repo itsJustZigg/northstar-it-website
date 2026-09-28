@@ -164,13 +164,12 @@ a {
     display: flex;
     flex-direction: column;
     padding-top: 108px;
-    height: 380px;
+    min-height: 380px;
     background-color: var(--primary-color);
     color: var(--bg-color);
 }
 .industries h2{
     font-size: 36px;
-    /* line-height: 46; */
     text-align: center;
     margin: 0 0 38px;
 }
@@ -458,6 +457,7 @@ footer a{
     margin-top: 32px;
 }
 
+
 @media (max-width: 900px) {
     
     .menu-btn{
@@ -518,6 +518,11 @@ footer a{
     .nav-overlay.active{
         opacity: 1;
         visibility: visible;
+    }
+
+    .industries ul{
+        flex-direction: column;
+        padding: 36px;
     }
 
     .footer-main{
