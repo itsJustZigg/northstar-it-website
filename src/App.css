@@ -18,8 +18,9 @@ p {
 }
 
 h1{
-    line-height: 66pt;
+    line-height: 1.3;
     font-size: 56pt;
+    
 }
 
 ul {
@@ -353,11 +354,12 @@ a {
     align-items: center;
     justify-content: center;
     background-color: #E4E6E7;
-    width: 1220px;
+    max-width: 1220px;
 }
 
 .cta-inner-box h1{
     text-align: center;
+    font-size: clamp(2.5rem, 5vw, 5rem);
     color: var(--primary-color);
 }
 
@@ -557,5 +559,9 @@ footer a{
     }
     .hero{
         background-position: 50% center;
+    }
+
+    .cta-inner-box form{
+        padding: 24px 16px;
     }
 }
