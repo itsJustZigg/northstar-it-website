@@ -1,5 +1,5 @@
 * {
-    outline: solid 1px red;
+    /* outline: solid 1px red; */
     box-sizing: border-box;
 }
 
@@ -187,11 +187,24 @@ a {
 }
 
 .testimonials{
+    /* display: flex;
+    height: 582px;
+    padding: 0px 24px;
+    align-items: center;
+    justify-content: center; */
+    display: flex;
+    justify-content: center;
+}
+.testimonials-gallery{
     display: flex;
     height: 582px;
     padding: 0px 24px;
     align-items: center;
     justify-content: center;
+}
+
+.carousel-container{
+    display: none;
 }
 
 .testimonial-card{
@@ -204,7 +217,8 @@ a {
 }
 
 .testimonial-card p{
-    font-size: 18pt;
+    /* font-size: 18pt; */
+    font-size: clamp(1rem, 1.5rem, 7vw);
 }
 
 .testimonial-profile{
@@ -459,6 +473,20 @@ footer a{
     margin-top: 32px;
 }
 
+@media (max-width: 1145px){
+    .testimonials-gallery{
+        display: none;
+    }
+
+    .carousel-container{
+        display: flex;
+        overflow: hidden;
+        height: 582px;
+        padding: 0px 24px;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
 @media (max-width: 900px) {
     
@@ -559,6 +587,10 @@ footer a{
     }
     .hero{
         background-position: 50% center;
+    }
+
+    .testimonial-card{
+        width: 200px;
     }
 
     .cta-inner-box form{

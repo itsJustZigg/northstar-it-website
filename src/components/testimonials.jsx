@@ -1,7 +1,10 @@
 import { useState } from "react"
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import sarahProfile from '../assets/testimonial-profile-pics/nussbaum-law-IOvsEAEjnDE-unsplash.jpg'
 import davidProfile from '../assets/testimonial-profile-pics/lucas-favre-_kwpH8O-dNo-unsplash.jpg'
 import jennProfile from '../assets/testimonial-profile-pics/podmatch-2mMhaoBGjCs-unsplash.jpg'
+
 
 function TestimonialCard({profileUrl, name, jobTitle, review}){
     return(
@@ -29,11 +32,26 @@ export default function Testimonials(){
     ]
     
     return(
+        <>
         <section className="testimonials">
-        {testimonials.map(item => <TestimonialCard profileUrl={item.profileUrl} 
-        name={item.name} 
-        jobTitle={item.jobTitle}
-        review={item.review}></TestimonialCard>)}
+        <div className="testimonials-gallery">
+            {testimonials.map(item => <TestimonialCard profileUrl={item.profileUrl}
+            name={item.name}
+            jobTitle={item.jobTitle}
+            review={item.review}></TestimonialCard>)}
+        </div>
+
+        <div className="carousel-container">
+               <div className="carousel-buttons">
+                   <ArrowCircleLeftIcon fontSize="large" /> <ArrowCircleRightIcon fontSize="large"/>
+               </div>
+                    {testimonials.map(item => <TestimonialCard profileUrl={item.profileUrl}
+                    name={item.name}
+                    jobTitle={item.jobTitle}
+                    review={item.review}></TestimonialCard>)}
+           </div>
         </section>
+        
+        </>
     )
 }
